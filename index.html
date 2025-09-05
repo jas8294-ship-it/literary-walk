@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literary Walk Birthday</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fefcf7;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    .stop {
+      display: none;
+    }
+    .stop.active {
+      display: block;
+    }
+    button {
+      background-color: #6b5b95;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #56487c;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday Nida! 🎉</h1>
+  <h2>Our Literary Walk in Concord, MA</h2>
+
+
+
+  <div id="stops">
+    <div class="stop active">
+      <h3>Welcome</h3>
+      <p>Step into the pages of American literature as we wander through Concord, a town where ideas once set the world alight. From libraries brimming with inspiration to the quiet resting place of great thinkers, every stop hums with stories. Walk with Emerson, Alcott, and their kindred spirits. Let Concord remind you that books are not only read, but lived.</p>
+      <img src="map.jpeg" alt="map">
+    </div>
+
+ <div class="stop">
+      <h3>Concord Library</h3>
+      <p>Start your literary adventure where the town’s stories live in books and whispers. Step into a haven where imagination still whispers between the shelves.</p>
+      <img src="lib.jpeg" alt="Concord Library">
+    </div>
+
+    <div class="stop">
+      <h3>Sleepy Hollow Cemetery</h3>
+      <p>Meet the resting places of literary giants — and maybe hear some poetic whispers! Wander among the gravestones, where Concord’s great storytellers rest yet still speak.</p>
+      <img src="sleep.jpg" alt="Sleepy Hollow Cemetery">
+    </div>
+
+    <div class="stop">
+      <h3>Ralph Waldo Emerson House</h3>
+      <p>Step into Emerson’s world and let transcendental thoughts float around you.</p>
+      <img src="emerson house.jpg" alt="Emerson House">
+    </div>
+
+    <div class="stop">
+      <h3>Concord Museum</h3>
+      <p>Discover artifacts of the town’s rich literary and revolutionary history. A cabinet of wonders where Concord’s past turns its own pages.</p>
+      <img src="museum.jpg" alt="Concord Museum">
+    </div>
+
+    <div class="stop">
+      <h3>Louisa May Alcott Orchard House</h3>
+      <p>End our walk at the home of Little Women — a cozy finale to our story-filled journey. Enter the cozy rooms where the March sisters first danced into the world.</p>
+      <img src="orchard.webp" alt="Orchard House">
+    </div>
+
+   <div class="stop">
+      <h3>Final stop</h3>
+      <p>Every story deserves a moment of celebration, and today we add a bright page to Concord’s tale. As we walk in the footsteps of writers who shaped imagination, we honor Nida’s own journey: a life as full of character, warmth, and wonder as the books we cherish. May this birthday be a preface to many chapters yet unwritten.</p>
+    </div>
+
+
+    <!-- Final Birthday Surprise Stop -->
+    <div class="stop">
+      <h3> 🎉🎉🎉🎉🎉🎉🎉</h3>
+     
+      <img src="literary walk.png" alt="Birthday Surprise">
+    </div>
+  </div>
+
+  <button onclick="nextStop()">Next Stop</button>
+
+  <script>
+    const stops = document.querySelectorAll('.stop');
+    let current = 0;
+
+    function nextStop() {
+      stops[current].classList.remove('active');
+      current = (current + 1) % stops.length;
+      stops[current].classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
